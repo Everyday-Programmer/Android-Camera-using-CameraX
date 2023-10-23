@@ -94,9 +94,8 @@ public class MainActivity extends AppCompatActivity {
                     public void onClick(View view) {
                         if (ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
                             activityResultLauncher.launch(Manifest.permission.WRITE_EXTERNAL_STORAGE);
-                        } else {
-                            takePicture(imageCapture);
                         }
+                        takePicture(imageCapture);
                     }
                 });
 
